@@ -1,0 +1,17 @@
+# Backend (Spring Boot / Maven)
+target/
+*.log
+
+# Frontend (Angular)
+web/node_modules/
+web/dist/
+web/.angular/cache/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
