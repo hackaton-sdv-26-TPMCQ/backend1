@@ -31,7 +31,14 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:4200", "http://127.0.0.1:4200"));
+
+        // 1. Ajoutez l'URL publique de votre frontend ici (sans le slash à la fin !)
+        config.setAllowedOrigins(List.of(
+                "http://localhost:4200",
+                "http://127.0.0.1:4200",
+                "https://carbon-app-front.onrender.com"
+        ));
+
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
